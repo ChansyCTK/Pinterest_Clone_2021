@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pinterest_clone/models/models.dart';
 import 'package:pinterest_clone/screens/home.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:pinterest_clone/services/api_management.dart';
 
 class MainBody extends StatefulWidget {
   @override
@@ -15,11 +17,13 @@ class _MainBodyState extends State<MainBody> {
     return SafeArea(
       child: Stack(
         children: [
+          // Show page
           IndexPage(),
           //AppBar
           Container(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              // App bar
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -262,6 +266,7 @@ class _MainBodyState extends State<MainBody> {
               ),
             ),
           ),
+          // Floating button
           Positioned(
             bottom: 30,
             right: 30,
